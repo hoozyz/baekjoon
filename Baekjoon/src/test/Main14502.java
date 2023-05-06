@@ -4,13 +4,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main14502 { // 14502
 	
-	private Map<Integer, String> zero = new HashMap<>(); // 0인 좌표 저장 -> x좌표 y좌표(모두) 
 	private int[][] arr;
 	private int[][] test;
 	private int n;

@@ -10,11 +10,11 @@ import java.util.StringTokenizer;
 
 public class Main2178 {
 
-	private int[][] maze; // 미로 배열
-	private int n, m;
-	private boolean[][] visit; // 방문했나 확인
-	private int[] dx = {-1, 1, 0, 0}; // x방향 좌표이동
-	private int[] dy = {0, 0, -1, 1}; // y방향 좌표이동
+	private static int[][] maze; // 미로 배열
+	private static int n, m;
+	private static boolean[][] visit; // 방문했나 확인
+	private static int[] dx = {-1, 1, 0, 0}; // x방향 좌표이동
+	private static int[] dy = {0, 0, -1, 1}; // y방향 좌표이동
 
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -44,7 +44,7 @@ public class Main2178 {
 		bw.close();
 	}
 
-	private void bfs(int a, int b) {
+	private static void bfs(int a, int b) {
 		visit[0][0] = true;
 		Queue<int[]> queue = new LinkedList<>();
 		queue.add(new int[] {a,b});

@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 // 백준은 클래스명 Main
 public class Main11659 {
 	
-	private int[] arr;
+	private static int[] arr;
 	
 	// 프로그래머스도 같이 하기 위해서 -> 여기에 백준, 프로그래머스 다 가능
 	public void solution() throws Exception{

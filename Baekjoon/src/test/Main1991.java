@@ -9,8 +9,8 @@ import java.util.StringTokenizer;
 
 public class Main1991 {
 
-	private Node root; // 루트 노드
-	private BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	private static Node root; // 루트 노드
+	private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -69,7 +69,7 @@ public class Main1991 {
 		}
 	}
 
-	private void preOrder(Node data) throws IOException { // 전위순회 : 루트 -> 왼쪽 -> 오른쪽
+	private static void preOrder(Node data) throws IOException { // 전위순회 : 루트 -> 왼쪽 -> 오른쪽
 		bw.write(data.data + "");
 
 		if (data.left != null) {
@@ -80,7 +80,7 @@ public class Main1991 {
 		}
 	}
 
-	private void inOrder(Node data) throws IOException { // 중위순회 : 왼쪽 -> 루트 -> 오른쪽
+	private static void inOrder(Node data) throws IOException { // 중위순회 : 왼쪽 -> 루트 -> 오른쪽
 		if (data.left != null) {
 			inOrder(data.left);
 		}
@@ -91,7 +91,7 @@ public class Main1991 {
 		}
 	}
 
-	private void postOrder(Node data) throws IOException { // 후위순회 : 왼쪽 -> 오른쪽 -> 루트
+	private static void postOrder(Node data) throws IOException { // 후위순회 : 왼쪽 -> 오른쪽 -> 루트
 		if (data.left != null) {
 			postOrder(data.left);
 		}

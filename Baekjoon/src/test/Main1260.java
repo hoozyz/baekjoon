@@ -15,13 +15,13 @@ import java.util.StringTokenizer;
 
 public class Main1260 { 
 	
-	private boolean[] visit; // 방문 
-	private int[][] graph; // 그래프 이차원 배열
-	private int n; // 정점 개수
-	private Set<Integer> set = new HashSet<>(); // 연결이 된 정점 집합
-	private List<Integer> list = new ArrayList<>(); // 오름차순 리스트
-	private Queue<Integer> queue = new LinkedList<>(); // 결과를 넣을 큐
-	private Queue<Integer> bfsQueue = new LinkedList<>(); // bfs의 정점당 자식 정점 큐
+	private static boolean[] visit; // 방문 
+	private static int[][] graph; // 그래프 이차원 배열
+	private static int n; // 정점 개수
+	private static Set<Integer> set = new HashSet<>(); // 연결이 된 정점 집합
+	private static List<Integer> list = new ArrayList<>(); // 오름차순 리스트
+	private static Queue<Integer> queue = new LinkedList<>(); // 결과를 넣을 큐
+	private static Queue<Integer> bfsQueue = new LinkedList<>(); // bfs의 정점당 자식 정점 큐
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -77,7 +77,7 @@ public class Main1260 {
 		bw.close();
 	}
 	
-	private void dfs(int a) {
+	private static void dfs(int a) {
 		visit[a] = true; // 방문했다는 것을 표시
 		queue.add(a); // 순서대로 넣기
 		
@@ -88,7 +88,7 @@ public class Main1260 {
 		}
 	}
 	
-	private void bfs(int a) {
+	private static void bfs(int a) {
 		visit[a] = true;
 		bfsQueue.add(a);
 		

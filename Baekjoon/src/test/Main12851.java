@@ -10,11 +10,11 @@ import java.util.StringTokenizer;
 
 public class Main12851 { 
 	
-	private int n, k;
-	private int[] time; // 방문하는 좌표마다 이동시간
-	private int result = 100002; // 방문시간이 제일 적은 시간 -> 처음에 가장 긴 시간보다 큰 값을 넣음
-	private Queue<Integer> queue = new LinkedList<>(); // 경로(리스트)를 넣을 큐 
-	private int count = 0;
+	private static int n, k;
+	private static int[] time; // 방문하는 좌표마다 이동시간
+	private static int result = 100002; // 방문시간이 제일 적은 시간 -> 처음에 가장 긴 시간보다 큰 값을 넣음
+	private static Queue<Integer> queue = new LinkedList<>(); // 경로(리스트)를 넣을 큐 
+	private static int count = 0;
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -39,7 +39,7 @@ public class Main12851 {
 		bw.close();
 	}
 	
-	private void bfs() {
+	private static void bfs() {
 		queue.add(n);
 		time[n] = 0; // 처음 좌표는 시간 0
 		

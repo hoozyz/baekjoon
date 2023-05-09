@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Main11660 { // 11660
 	
-	private int[][] arr;
+	private static int[][] arr;
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

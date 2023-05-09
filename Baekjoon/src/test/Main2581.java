@@ -44,7 +44,7 @@ public class Main2581 { // 2581
 		bw.close();
 	}
 	
-	private int prime(int m) {
+	private static int prime(int m) {
 		
 		for(int i = 2; i <= m/2; i++) {
 			if(m % i == 0) {

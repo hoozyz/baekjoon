@@ -8,8 +8,8 @@ import java.util.StringTokenizer;
 
 public class Main1717 { 
 	
-	private int[] elements; // 원소 배열 1 ~ n 까지
-	private int[] parents; // 부모 노트 배열
+	private static int[] elements; // 원소 배열 1 ~ n 까지
+	private static int[] parents; // 부모 노트 배열
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -67,7 +67,7 @@ public class Main1717 {
 		bw.close();
 	}
 	
-	private int findParent(int a) { // a가 속한 집합의 제일 작은 숫자 찾기 -> 부모 노드를 계속 찾는 재귀
+	private static int findParent(int a) { // a가 속한 집합의 제일 작은 숫자 찾기 -> 부모 노드를 계속 찾는 재귀
 		
 		if(parents[a] == a) { // 부모 노드가 같으면 현재 노드가 제일 작은 숫자
 			return parents[a];

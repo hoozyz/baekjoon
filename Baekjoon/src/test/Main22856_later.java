@@ -8,10 +8,10 @@ import java.util.StringTokenizer;
 
 public class Main22856_later { 
 	
-	private Node root;
-	private int n;
-	private int allCount = 0; // 전체 간선 개수
-	private int rightCount = 0; // 오른쪽 간선 개수 
+	private static Node root;
+	private static int n;
+	private static int allCount = 0; // 전체 간선 개수
+	private static int rightCount = 0; // 오른쪽 간선 개수 
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -49,7 +49,7 @@ public class Main22856_later {
 	}
 	
 	// 전체 간선 개수 구하기
-	private void allCount(Node node) {
+	private static void allCount(Node node) {
 		if(node.left != null) {
 			allCount++;
 			allCount(node.left);
@@ -62,7 +62,7 @@ public class Main22856_later {
 	}
 	
 	// 맨 오른쪽 간선 구하기
-	private void rightCount(Node node) {
+	private static void rightCount(Node node) {
 		if(node.right != null) {
 			rightCount++; // 오른쪽 간선
 			rightCount(node.right);

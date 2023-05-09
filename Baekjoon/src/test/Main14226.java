@@ -10,10 +10,10 @@ import java.util.StringTokenizer;
 
 public class Main14226 { 
 	
-	private int s;
-	private int[][] time;
-	private int result = 2001;
-	private Queue<int[]> queue = new LinkedList<>();
+	private static int s;
+	private static int[][] time;
+	private static int result = 2001;
+	private static Queue<int[]> queue = new LinkedList<>();
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -31,7 +31,7 @@ public class Main14226 {
 		bw.close();
 	}
 	
-	private void bfs() {
+	private static void bfs() {
 		int display = 1; // 화면 이모티콘 개수
 		int clip = 0; // 클립보드 이모티콘 개수
 		queue.add(new int[] {display, clip});

@@ -8,11 +8,11 @@ import java.util.StringTokenizer;
 
 public class Main14502 { // 14502
 	
-	private int[][] arr;
-	private int[][] test;
-	private int n;
-	private int m;
-	private int max;
+	private static int[][] arr;
+	private static int[][] test;
+	private static int n;
+	private static int m;
+	private static int max;
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -41,7 +41,7 @@ public class Main14502 { // 14502
 		bw.close();
 	}
 	
-	private void bfs() {
+	private static void bfs() {
 		for(int i =0; i < n; i++) {
 			for (int j =0; j < m; j++) {
 				test[i][j] = arr[i][j];
@@ -87,7 +87,7 @@ public class Main14502 { // 14502
 	}
 	
 	// 0,0 부터 0을 고른 횟수가 3개 일 때마다 바이러스 퍼뜨리고 안전지대 수 구하기
-	private void dfs(int depth) {
+	private static void dfs(int depth) {
 		if(depth == 3) {
 			bfs(); // 벽은 다 세웠으니 바이러스 퍼뜨리고 안전지대 세기
 			return;
@@ -104,7 +104,7 @@ public class Main14502 { // 14502
 		}
 	}
 	
-	private void virus(int x, int y) { // n,m 이 2인 바이러스 일 때 주변이 0이면 2로 변경 -> 회귀
+	private static void virus(int x, int y) { // n,m 이 2인 바이러스 일 때 주변이 0이면 2로 변경 -> 회귀
 		if(x-1 >= 0) { // 위 칸이 있을 때
 			if(test[x-1][y] == 0) {
 				test[x-1][y] = 2;

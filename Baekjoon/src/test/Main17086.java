@@ -10,11 +10,11 @@ import java.util.StringTokenizer;
 
 public class Main17086 { 
 	
-	private int n, m;
-	private int[] dx = {-1, 1, 0, 0, -1, -1, 1, 1}; // 8방향
-	private int[] dy = {0, 0, -1, 1, -1, 1, -1, 1}; // 8방향
-	private int[][] aria; // 공간
-	private int result = 0;
+	private static int n, m;
+	private static int[] dx = {-1, 1, 0, 0, -1, -1, 1, 1}; // 8방향
+	private static int[] dy = {0, 0, -1, 1, -1, 1, -1, 1}; // 8방향
+	private static int[][] aria; // 공간
+	private static int result = 0;
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -48,7 +48,7 @@ public class Main17086 {
 	}
 	
 	// 모든 점 돌면서 1찾아가기 -> result와 비교 후 거리 최댓값 넣기
-	private void bfs(int x, int y) {
+	private static void bfs(int x, int y) {
 		Queue<int[]> queue = new LinkedList<>();
 		boolean[][] visit; // 방문 체크
 		visit = new boolean[n][m];

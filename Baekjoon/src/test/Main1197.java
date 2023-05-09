@@ -15,10 +15,10 @@ import java.util.StringTokenizer;
 
 public class Main1197 { 
 	
-	private int[] vertax; // 정점 배열
-	private int[] parents; // 정점의 부모 노드 배열
-	private Set<Integer> weight = new HashSet<>();; // 간선 가중치 배열
-	private Map<Integer, List<Integer>> edge = new HashMap<>(); // 가중치 마다 정점 연결 정보 map
+	private static int[] vertax; // 정점 배열
+	private static int[] parents; // 정점의 부모 노드 배열
+	private static Set<Integer> weight = new HashSet<>();; // 간선 가중치 배열
+	private static Map<Integer, List<Integer>> edge = new HashMap<>(); // 가중치 마다 정점 연결 정보 map
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -92,7 +92,7 @@ public class Main1197 {
 		bw.close();
 	}
 	
-	private int findParent(int a) {
+	private static int findParent(int a) {
 		if(parents[a-1] == a) {
 			return parents[a-1];
 		}

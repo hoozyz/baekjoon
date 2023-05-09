@@ -11,10 +11,10 @@ import java.util.StringTokenizer;
 
 public class Main13913 { 
 	
-	private int n, k;
-	private int[] time; // 방문하는 좌표마다 이동시간
-	private int[] parent; // 전(부모) 좌표 넣기
-	private Queue<Integer> queue = new LinkedList<>(); // 경로(리스트)를 넣을 큐 
+	private static int n, k;
+	private static int[] time; // 방문하는 좌표마다 이동시간
+	private static int[] parent; // 전(부모) 좌표 넣기
+	private static Queue<Integer> queue = new LinkedList<>(); // 경로(리스트)를 넣을 큐 
 	
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -57,7 +57,7 @@ public class Main13913 {
 		bw.close();
 	}
 	
-	private void bfs() {
+	private static void bfs() {
 		queue.add(n);
 		time[n] = 0; // 처음 좌표는 시간 0
 		

@@ -10,11 +10,11 @@ import java.util.StringTokenizer;
 
 public class Main13549 {
 
-	private int n, k;
-	private Queue<Integer> queue = new LinkedList<>();
-	private int result = 100002;
-	private int[] time;
-	private boolean[] visit; // 방문 체크
+	private static int n, k;
+	private static Queue<Integer> queue = new LinkedList<>();
+	private static int result = 100002;
+	private static int[] time;
+	private static boolean[] visit; // 방문 체크
 
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -41,7 +41,7 @@ public class Main13549 {
 		bw.close();
 	}
 
-	private void bfs() {
+	private static void bfs() {
 		queue.add(n);
 		time[n] = 0;
 

@@ -14,9 +14,9 @@ import java.util.StringTokenizer;
 
 public class Main2252 {
 
-	private Map<Integer, Integer> level = new HashMap<>(); // 진입차수 맵
-	private Map<Integer, List<Integer>> edgeMap = new HashMap<>();
-	private Queue<Integer> queue = new LinkedList<>(); // 진입차수 순서대로 큐에 넣고 넣은 순서대로 빼면서 결과에 넣기
+	private static Map<Integer, Integer> level = new HashMap<>(); // 진입차수 맵
+	private static Map<Integer, List<Integer>> edgeMap = new HashMap<>();
+	private static Queue<Integer> queue = new LinkedList<>(); // 진입차수 순서대로 큐에 넣고 넣은 순서대로 빼면서 결과에 넣기
 
 	public void solution() throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
